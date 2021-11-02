@@ -18,8 +18,9 @@ public class BoldUndoableCommand implements UndoableCommand{
         history.push(this);
     }
 
+
     @Override
-    public void undo() {
-        doc.setContent(prevContent);
+    public void unexecute() {
+        this.doc.setContent(prevContent);
     }
 }

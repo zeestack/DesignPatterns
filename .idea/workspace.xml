@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f604edc-ddb8-4278-873e-42302f73ed63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/editor/BoldUndoableCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/editor/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/editor/Document.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/editor/History.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/editor/UndoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/editor/UndoableCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zahid/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zahid/editor/BoldUndoableCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/editor/BoldUndoableCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zahid/editor/UndoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/editor/UndoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zahid/editor/UndoableCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/editor/UndoableCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +124,7 @@
       <updated>1635801181226</updated>
       <workItem from="1635801183992" duration="5003000" />
       <workItem from="1635826354707" duration="187000" />
-      <workItem from="1635826578041" duration="5648000" />
+      <workItem from="1635826578041" duration="5959000" />
     </task>
     <servers />
   </component>

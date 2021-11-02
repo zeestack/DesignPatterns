@@ -11,7 +11,7 @@ public class UndoCommand implements Command{
     @Override
     public void execute() {
         if(commad != null)
-        this.commad.undo();
+        this.commad.unexecute();
     }
 
 }
