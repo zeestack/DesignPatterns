@@ -3,17 +3,44 @@ package com.zahid;
 
 import com.zahid.command.*;
 import com.zahid.command.fx.Button;
-import com.zahid.editor.BoldUndoableCommand;
-import com.zahid.editor.Document;
-import com.zahid.editor.History;
-import com.zahid.editor.UndoCommand;
+import com.zahid.command.editor.BoldUndoableCommand;
+import com.zahid.command.editor.Document;
+import com.zahid.command.editor.History;
+import com.zahid.command.editor.UndoCommand;
+import com.zahid.momento.*;
 import com.zahid.template.GenerateReport;
 import com.zahid.template.TransferMoney;
 
 public class Main {
 
     public static void main(String[] args) {
-	    var moneyTransfer = new TransferMoney();
+
+        /* momento Pattern */
+        var history = new com.zahid.momento.History();
+
+        var editor = new Editor();
+
+        editor.setContent("hello");
+        history.push(editor.createState());
+
+        editor.setContent("world");
+        history.push(editor.createState());
+
+        editor.setContent("green");
+        
+        System.out.println(editor.getContent());
+
+        editor.restoreState(history.pop());
+        editor.restoreState(history.pop());
+        editor.restoreState(history.pop());
+
+        System.out.println(editor.getContent());
+
+    }
+
+
+    public static void commandPatternDemo(){
+        var moneyTransfer = new TransferMoney();
         moneyTransfer.execute();
 
         var reportGen = new GenerateReport();
@@ -44,8 +71,6 @@ public class Main {
 
         undoCommand.execute();
         System.out.println(doc.getContent());
-
-
 
     }
 

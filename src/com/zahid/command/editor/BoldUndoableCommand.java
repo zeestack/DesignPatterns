@@ -1,4 +1,4 @@
-package com.zahid.editor;
+package com.zahid.command.editor;
 
 public class BoldUndoableCommand implements UndoableCommand{
 

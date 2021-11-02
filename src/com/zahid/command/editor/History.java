@@ -1,4 +1,4 @@
-package com.zahid.editor;
+package com.zahid.command.editor;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
