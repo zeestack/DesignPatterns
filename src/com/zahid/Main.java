@@ -3,6 +3,10 @@ package com.zahid;
 
 import com.zahid.command.*;
 import com.zahid.command.fx.Button;
+import com.zahid.editor.BoldUndoableCommand;
+import com.zahid.editor.Document;
+import com.zahid.editor.History;
+import com.zahid.editor.UndoCommand;
 import com.zahid.template.GenerateReport;
 import com.zahid.template.TransferMoney;
 
@@ -26,8 +30,20 @@ public class Main {
         var commands = new SeriesCommand();
         commands.addCommand(new ResizeCommand());
         commands.addCommand(new BlackAndWhiteFilterCommand());
-
         commands.execute();
+
+
+        //undoable command
+        var history = new History();
+        var doc = new Document("Hello World");
+        var boldCommand = new BoldUndoableCommand(doc, history);
+
+        boldCommand.execute();
+
+        var undoCommand = new UndoCommand(history);
+
+        undoCommand.execute();
+        System.out.println(doc.getContent());
 
 
 
