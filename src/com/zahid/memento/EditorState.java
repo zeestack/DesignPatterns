@@ -1,4 +1,4 @@
-package com.zahid.momento;
+package com.zahid.memento;
 
 public class EditorState {
 

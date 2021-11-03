@@ -7,7 +7,7 @@ import com.zahid.command.editor.BoldUndoableCommand;
 import com.zahid.command.editor.Document;
 import com.zahid.command.editor.History;
 import com.zahid.command.editor.UndoCommand;
-import com.zahid.momento.*;
+import com.zahid.memento.*;
 import com.zahid.template.GenerateReport;
 import com.zahid.template.TransferMoney;
 
@@ -15,9 +15,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        /* momento Pattern */
-        var history = new com.zahid.momento.History();
+        mementoPatternDemo();
 
+    }
+
+    public static void mementoPatternDemo() {
+        /* memento Pattern */
+
+        var history = new com.zahid.memento.History();
         var editor = new Editor();
 
         editor.setContent("hello");
@@ -25,31 +30,28 @@ public class Main {
 
         editor.setContent("world");
         history.push(editor.createState());
-
         editor.setContent("green");
-        
         System.out.println(editor.getContent());
 
-        editor.restoreState(history.pop());
-        editor.restoreState(history.pop());
+        /* undo green */
         editor.restoreState(history.pop());
 
-        System.out.println(editor.getContent());
-
+        System.out.println("undo: " +editor.getContent());
     }
 
 
-    public static void commandPatternDemo(){
+    public static void templatePatternDemo() {
         var moneyTransfer = new TransferMoney();
         moneyTransfer.execute();
-
         var reportGen = new GenerateReport();
         reportGen.execute();
+    }
+
+    public static void commandPatternDemo(){
 
         var service = new CustomerService();
         var command = new AddCustomerCommand(service);
         var button = new Button(command);
-
         button.click();
 
         //series commands
@@ -67,9 +69,10 @@ public class Main {
 
         boldCommand.execute();
 
+        //undoBold
         var undoCommand = new UndoCommand(history);
-
         undoCommand.execute();
+
         System.out.println(doc.getContent());
 
     }
