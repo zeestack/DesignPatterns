@@ -8,14 +8,29 @@ import com.zahid.command.editor.Document;
 import com.zahid.command.editor.History;
 import com.zahid.command.editor.UndoCommand;
 import com.zahid.memento.*;
+import com.zahid.state.Brush;
+import com.zahid.state.Canvas;
+import com.zahid.state.Selection;
 import com.zahid.template.GenerateReport;
 import com.zahid.template.TransferMoney;
 
 public class Main {
 
     public static void main(String[] args) {
+    statePatternDemo();
 
-        mementoPatternDemo();
+    }
+
+    public static void statePatternDemo(){
+        var canvas = new Canvas(new Brush());
+        canvas.mouseUp();
+        canvas.mouseDown();
+
+        canvas.setTool(new Selection());
+
+        canvas.mouseUp();
+        canvas.mouseDown();
+
 
     }
 
@@ -38,7 +53,6 @@ public class Main {
 
         System.out.println("undo: " +editor.getContent());
     }
-
 
     public static void templatePatternDemo() {
         var moneyTransfer = new TransferMoney();
