@@ -7,6 +7,8 @@ import com.zahid.command.editor.BoldUndoableCommand;
 import com.zahid.command.editor.Document;
 import com.zahid.command.editor.History;
 import com.zahid.command.editor.UndoCommand;
+import com.zahid.iterator.BrowseHistory;
+import com.zahid.iterator.ListIterator;
 import com.zahid.memento.*;
 import com.zahid.state.Brush;
 import com.zahid.state.Canvas;
@@ -17,7 +19,23 @@ import com.zahid.template.TransferMoney;
 public class Main {
 
     public static void main(String[] args) {
-    statePatternDemo();
+        iteratorPatternDemo();
+    }
+
+    public static void iteratorPatternDemo(){
+        var history = new BrowseHistory();
+        var iterator = history.createIterator();
+
+        history.push("abc");
+        history.push("def");
+        history.push("ghi");
+        history.push("jkl");
+
+        while(iterator.hasNext()){
+            System.out.println(iterator.current());
+            iterator.next();
+        }
+
 
     }
 
