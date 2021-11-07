@@ -13,13 +13,19 @@ import com.zahid.memento.*;
 import com.zahid.state.Brush;
 import com.zahid.state.Canvas;
 import com.zahid.state.Selection;
+import com.zahid.strategy.*;
 import com.zahid.template.GenerateReport;
 import com.zahid.template.TransferMoney;
 
 public class Main {
 
     public static void main(String[] args) {
-        iteratorPatternDemo();
+        strategyPatternDemo();
+    }
+
+    public static void strategyPatternDemo(){
+        var storeImage = new ImageStorage(new PNGCompressor(), new ContrastFilter());
+        storeImage.store("C:\\zahid.jpg");
     }
 
     public static void iteratorPatternDemo(){

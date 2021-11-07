@@ -1,5 +1,7 @@
 package com.zahid.iterator;
 
+// this class could be defined with in the BrowseHistory Class
+
 public class ListIterator implements Iterator{
     private BrowseHistory history;
     int index = 0;
