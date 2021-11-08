@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f604edc-ddb8-4278-873e-42302f73ed63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/ActiveObservers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/Chart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/DataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/SpreadSheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/mediator/ArticlesDialogBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/mediator/Button.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/mediator/EventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/mediator/ListBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/mediator/TextBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/mediator/UIControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zahid/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/Main.java" afterDir="false" />
     </list>

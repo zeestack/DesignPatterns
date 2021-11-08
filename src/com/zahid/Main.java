@@ -9,6 +9,7 @@ import com.zahid.command.editor.History;
 import com.zahid.command.editor.UndoCommand;
 import com.zahid.iterator.BrowseHistory;
 import com.zahid.iterator.ListIterator;
+import com.zahid.mediator.ArticlesDialogBox;
 import com.zahid.memento.*;
 import com.zahid.observer.Chart;
 import com.zahid.observer.DataSource;
@@ -23,7 +24,12 @@ import com.zahid.template.TransferMoney;
 public class Main {
 
     public static void main(String[] args) {
-        observerPatternDemo();
+        mediatorPatternDemo();
+    }
+
+    public static void mediatorPatternDemo() {
+        var dialogBox = new ArticlesDialogBox();
+        dialogBox.simulateEvents();
     }
 
     public static void observerPatternDemo(){
