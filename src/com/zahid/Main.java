@@ -10,6 +10,9 @@ import com.zahid.command.editor.UndoCommand;
 import com.zahid.iterator.BrowseHistory;
 import com.zahid.iterator.ListIterator;
 import com.zahid.memento.*;
+import com.zahid.observer.Chart;
+import com.zahid.observer.DataSource;
+import com.zahid.observer.SpreadSheet;
 import com.zahid.state.Brush;
 import com.zahid.state.Canvas;
 import com.zahid.state.Selection;
@@ -20,7 +23,26 @@ import com.zahid.template.TransferMoney;
 public class Main {
 
     public static void main(String[] args) {
-        strategyPatternDemo();
+        observerPatternDemo();
+    }
+
+    public static void observerPatternDemo(){
+        var dataSource = new DataSource();
+        var sheet1 = new SpreadSheet("sheet1", dataSource);
+        var sheet2 = new SpreadSheet("sheet2", dataSource);
+
+        dataSource.addObserver(sheet1);
+        dataSource.addObserver(sheet2);
+
+        var chart = new Chart("piechart",dataSource);
+
+        dataSource.addObserver(chart);
+
+
+        dataSource.setValue(1);
+
+        dataSource.setValue(5);
+
     }
 
     public static void strategyPatternDemo(){

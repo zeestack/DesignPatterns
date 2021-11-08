@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f604edc-ddb8-4278-873e-42302f73ed63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/strategy/BlackAndWhiteFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/strategy/Compressor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/strategy/ContrastFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/strategy/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/strategy/ImageStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/strategy/JPEGCompressor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/strategy/PNGCompressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/ActiveObservers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/Chart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/DataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/observer/SpreadSheet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zahid/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zahid/iterator/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/iterator/ListIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
