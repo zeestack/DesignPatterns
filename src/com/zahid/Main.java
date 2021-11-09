@@ -1,6 +1,8 @@
 package com.zahid;
 
 
+import com.zahid.chainOfResponsibility.*;
+import com.zahid.chainOfResponsibility.Compressor;
 import com.zahid.command.*;
 import com.zahid.command.fx.Button;
 import com.zahid.command.editor.BoldUndoableCommand;
@@ -24,7 +26,17 @@ import com.zahid.template.TransferMoney;
 public class Main {
 
     public static void main(String[] args) {
-        mediatorPatternDemo();
+        chainOfResponsibilityPatternDemo();
+    }
+
+    public static void chainOfResponsibilityPatternDemo(){
+        //pipeline --> authentication -> logger -> compression
+        var compressor = new Compressor(null);
+        var logger = new Logger(compressor);
+        var authenticator = new Authenticator(logger);
+
+        var webServer = new WebServer(authenticator);
+        webServer.handle(new HttpRequest("admin", "1234"));
     }
 
     public static void mediatorPatternDemo() {
