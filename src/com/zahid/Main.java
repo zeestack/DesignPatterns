@@ -22,13 +22,23 @@ import com.zahid.state.Selection;
 import com.zahid.strategy.*;
 import com.zahid.template.GenerateReport;
 import com.zahid.template.TransferMoney;
+import com.zahid.visitor.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        chainOfResponsibilityPatternDemo();
+        visitorPatternDemo();
     }
 
+    public static void visitorPatternDemo(){
+        var document = new HtmlDocument();
+        document.addNode(new AnchorNode());
+        document.addNode(new HeadingNode());
+        var operation1 = new HighlightOperation();
+        var operation2 = new PlainTextOperation();
+        document.execute(operation1);
+        document.execute(operation2);
+    }
     public static void chainOfResponsibilityPatternDemo(){
         //pipeline --> authentication -> logger -> compression
         var compressor = new Compressor(null);
