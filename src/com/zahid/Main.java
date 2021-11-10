@@ -9,6 +9,9 @@ import com.zahid.command.editor.BoldUndoableCommand;
 import com.zahid.command.editor.Document;
 import com.zahid.command.editor.History;
 import com.zahid.command.editor.UndoCommand;
+import com.zahid.composite.CircleShape;
+import com.zahid.composite.Group;
+import com.zahid.composite.SquareShape;
 import com.zahid.iterator.BrowseHistory;
 import com.zahid.iterator.ListIterator;
 import com.zahid.mediator.ArticlesDialogBox;
@@ -27,7 +30,22 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
-        visitorPatternDemo();
+        compositePatternDemo();
+    }
+
+    public static void compositePatternDemo(){
+        var group1 = new Group();
+        var group2 = new Group();
+        var shape1 = new CircleShape();
+        var shape2 = new SquareShape();
+
+        group1.add(shape1);
+        group1.add(shape2);
+
+        group2.add(group1);
+
+
+        group2.render();
     }
 
     public static void visitorPatternDemo(){
@@ -39,6 +57,7 @@ public class Main {
         document.execute(operation1);
         document.execute(operation2);
     }
+
     public static void chainOfResponsibilityPatternDemo(){
         //pipeline --> authentication -> logger -> compression
         var compressor = new Compressor(null);
