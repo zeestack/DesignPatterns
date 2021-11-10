@@ -1,6 +1,11 @@
 package com.zahid;
 
 
+import com.zahid.adapter.Image;
+import com.zahid.adapter.ImageView;
+import com.zahid.adapter.VividFilter;
+import com.zahid.adapter.PheonixAdaptor;
+import com.zahid.adapter.pheonixFilter.PheonixFilter;
 import com.zahid.chainOfResponsibility.*;
 import com.zahid.chainOfResponsibility.Compressor;
 import com.zahid.command.*;
@@ -13,7 +18,6 @@ import com.zahid.composite.CircleShape;
 import com.zahid.composite.Group;
 import com.zahid.composite.SquareShape;
 import com.zahid.iterator.BrowseHistory;
-import com.zahid.iterator.ListIterator;
 import com.zahid.mediator.ArticlesDialogBox;
 import com.zahid.memento.*;
 import com.zahid.observer.Chart;
@@ -30,7 +34,13 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
-        compositePatternDemo();
+        adaptorPatternDemo();
+    }
+
+    public static void adaptorPatternDemo(){
+        var imageView = new ImageView(new Image());
+        imageView.apply(new VividFilter());
+        imageView.apply(new PheonixAdaptor(new PheonixFilter()));
     }
 
     public static void compositePatternDemo(){
