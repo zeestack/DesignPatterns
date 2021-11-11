@@ -17,6 +17,9 @@ import com.zahid.command.editor.UndoCommand;
 import com.zahid.composite.CircleShape;
 import com.zahid.composite.Group;
 import com.zahid.composite.SquareShape;
+import com.zahid.decorator.CompressedStream;
+import com.zahid.decorator.EncryptStream;
+import com.zahid.decorator.Storage;
 import com.zahid.iterator.BrowseHistory;
 import com.zahid.mediator.ArticlesDialogBox;
 import com.zahid.memento.*;
@@ -34,7 +37,13 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
-        adaptorPatternDemo();
+        decoratorPatternDemo();
+    }
+
+    public static void decoratorPatternDemo(){
+        var stream = new EncryptStream(new CompressedStream(new Storage()));
+
+        stream.write("1234-1234-1234-1234");
     }
 
     public static void adaptorPatternDemo(){
