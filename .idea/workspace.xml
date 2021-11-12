@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f604edc-ddb8-4278-873e-42302f73ed63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/CompressedStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/EncryptStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/Storage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/Stream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/facade/Authenticate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/facade/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/facade/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/facade/NotificationServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zahid/facade/NotificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zahid/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zahid/Main.java" afterDir="false" />
     </list>
@@ -101,6 +102,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -154,5 +156,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

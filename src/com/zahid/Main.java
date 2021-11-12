@@ -20,6 +20,8 @@ import com.zahid.composite.SquareShape;
 import com.zahid.decorator.CompressedStream;
 import com.zahid.decorator.EncryptStream;
 import com.zahid.decorator.Storage;
+import com.zahid.facade.NotificationServer;
+import com.zahid.facade.NotificationService;
 import com.zahid.iterator.BrowseHistory;
 import com.zahid.mediator.ArticlesDialogBox;
 import com.zahid.memento.*;
@@ -37,7 +39,14 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
-        decoratorPatternDemo();
+
+        facadePatternDemo();
+
+    }
+
+    public static void facadePatternDemo(){
+        var notificationService = new NotificationService();
+        notificationService.send("Hellow World", "ip");
     }
 
     public static void decoratorPatternDemo(){
