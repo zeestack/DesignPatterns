@@ -31,6 +31,8 @@ import com.zahid.memento.*;
 import com.zahid.observer.Chart;
 import com.zahid.observer.DataSource;
 import com.zahid.observer.SpreadSheet;
+import com.zahid.prototype.Circle;
+import com.zahid.prototype.ContextMenu;
 import com.zahid.proxy.Library;
 import com.zahid.proxy.LoggingEbookProxy;
 import com.zahid.proxy.ProxyEbook;
@@ -47,7 +49,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-       proxyPatternDemo();
+        prototypePatternDemo();
+    }
+
+    public static void prototypePatternDemo(){
+        var circle = new Circle(5);
+
+        var contextMenu = new ContextMenu();
+        var circle2 = contextMenu.duplicate(circle);
+
+        circle.render();
+        circle2.render();
 
     }
 
