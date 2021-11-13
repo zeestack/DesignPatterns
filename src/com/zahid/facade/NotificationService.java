@@ -1,6 +1,6 @@
 package com.zahid.facade;
 
-//facede pattern to provide simple interface
+//facade pattern to provide simple interface
 
 public class NotificationService {
 
@@ -14,6 +14,4 @@ public class NotificationService {
         connection.disconnect();
 
     }
-
-
 }

@@ -22,6 +22,8 @@ import com.zahid.decorator.EncryptStream;
 import com.zahid.decorator.Storage;
 import com.zahid.facade.NotificationServer;
 import com.zahid.facade.NotificationService;
+import com.zahid.flyweight.PointIconFactory;
+import com.zahid.flyweight.PointService;
 import com.zahid.iterator.BrowseHistory;
 import com.zahid.mediator.ArticlesDialogBox;
 import com.zahid.memento.*;
@@ -40,8 +42,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        facadePatternDemo();
+        flyweightPatternDemo();
 
+    }
+
+    public static void flyweightPatternDemo(){
+        var service = new PointService(new PointIconFactory());
+        for(var point : service.getPoints())
+            point.draw();
     }
 
     public static void facadePatternDemo(){
