@@ -37,6 +37,7 @@ import com.zahid.proxy.Library;
 import com.zahid.proxy.LoggingEbookProxy;
 import com.zahid.proxy.ProxyEbook;
 import com.zahid.proxy.RealEbook;
+import com.zahid.singleton.ConfigManager;
 import com.zahid.state.Brush;
 import com.zahid.state.Canvas;
 import com.zahid.state.Selection;
@@ -48,8 +49,15 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
+        singletonPatternDemo();
+    }
 
-        prototypePatternDemo();
+    public static void singletonPatternDemo() {
+        var configManager = ConfigManager.getInstance();
+        configManager.set("name", "Zahid");
+        System.out.println(configManager.get("name"));
+        var configManager1 = ConfigManager.getInstance();
+        System.out.println(configManager1.get("name"));
     }
 
     public static void prototypePatternDemo(){
