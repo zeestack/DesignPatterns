@@ -8,8 +8,6 @@ import com.zahid.adapter.PheonixAdaptor;
 import com.zahid.adapter.pheonixFilter.PheonixFilter;
 import com.zahid.bridge.AdvancedRemoteControl;
 import com.zahid.bridge.LgTV;
-import com.zahid.bridge.RemoteControl;
-import com.zahid.bridge.SonyTV;
 import com.zahid.chainOfResponsibility.*;
 import com.zahid.chainOfResponsibility.Compressor;
 import com.zahid.command.*;
@@ -24,7 +22,6 @@ import com.zahid.composite.SquareShape;
 import com.zahid.decorator.CompressedStream;
 import com.zahid.decorator.EncryptStream;
 import com.zahid.decorator.Storage;
-import com.zahid.facade.NotificationServer;
 import com.zahid.facade.NotificationService;
 import com.zahid.flyweight.PointIconFactory;
 import com.zahid.flyweight.PointService;
@@ -34,6 +31,10 @@ import com.zahid.memento.*;
 import com.zahid.observer.Chart;
 import com.zahid.observer.DataSource;
 import com.zahid.observer.SpreadSheet;
+import com.zahid.proxy.Library;
+import com.zahid.proxy.LoggingEbookProxy;
+import com.zahid.proxy.ProxyEbook;
+import com.zahid.proxy.RealEbook;
 import com.zahid.state.Brush;
 import com.zahid.state.Canvas;
 import com.zahid.state.Selection;
@@ -46,8 +47,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-       bridgePatternDemo();
+       proxyPatternDemo();
 
+    }
+
+    public static void proxyPatternDemo() {
+        var library = new Library();
+        String[] fileNames = {"a", "b", "c"};
+        for(var fileName : fileNames) {
+            library.add(new LoggingEbookProxy(fileName));
+        }
+
+        library.openEbook("a");
+        library.openEbook("b");
     }
 
     public static void bridgePatternDemo(){
