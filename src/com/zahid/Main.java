@@ -6,6 +6,10 @@ import com.zahid.adapter.ImageView;
 import com.zahid.adapter.VividFilter;
 import com.zahid.adapter.PheonixAdaptor;
 import com.zahid.adapter.pheonixFilter.PheonixFilter;
+import com.zahid.bridge.AdvancedRemoteControl;
+import com.zahid.bridge.LgTV;
+import com.zahid.bridge.RemoteControl;
+import com.zahid.bridge.SonyTV;
 import com.zahid.chainOfResponsibility.*;
 import com.zahid.chainOfResponsibility.Compressor;
 import com.zahid.command.*;
@@ -42,8 +46,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        flyweightPatternDemo();
+       bridgePatternDemo();
 
+    }
+
+    public static void bridgePatternDemo(){
+        // var remoteControl = new RemoteControl(new SonyTV());
+         var remoteControl = new AdvancedRemoteControl(new LgTV());
+        remoteControl.turnOn();
+        remoteControl.turnOff();
+        remoteControl.setChannel(10);
     }
 
     public static void flyweightPatternDemo(){
