@@ -23,6 +23,7 @@ import com.zahid.decorator.CompressedStream;
 import com.zahid.decorator.EncryptStream;
 import com.zahid.decorator.Storage;
 import com.zahid.facade.NotificationService;
+import com.zahid.factorymethod.ProductController;
 import com.zahid.flyweight.PointIconFactory;
 import com.zahid.flyweight.PointService;
 import com.zahid.iterator.BrowseHistory;
@@ -49,7 +50,12 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
-        singletonPatternDemo();
+        factoryMethodPatternDemo();
+    }
+
+    public static void factoryMethodPatternDemo(){
+        var productController = new ProductController();
+        productController.listProducts();
     }
 
     public static void singletonPatternDemo() {
