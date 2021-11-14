@@ -11,6 +11,10 @@ import com.zahid.adapter.PheonixAdaptor;
 import com.zahid.adapter.pheonixFilter.PheonixFilter;
 import com.zahid.bridge.AdvancedRemoteControl;
 import com.zahid.bridge.LgTV;
+import com.zahid.builder.MovieBuilder;
+import com.zahid.builder.PdfDocumentBuilder;
+import com.zahid.builder.Presentation;
+import com.zahid.builder.Slide;
 import com.zahid.chainOfResponsibility.*;
 import com.zahid.chainOfResponsibility.Compressor;
 import com.zahid.command.*;
@@ -53,7 +57,22 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
-        abstractFactoryPatternDemo();
+        builderPatternDemo();
+    }
+
+    public static void builderPatternDemo(){
+        var presentation = new Presentation();
+        presentation.addSlide(new Slide("Slide 1"));
+        presentation.addSlide(new Slide("Slide 2"));
+
+        // var builder = new MovieBuilder();
+        // presentation.export(builder);
+        // var movie = builder.getMovie();
+
+        // or
+        var builder = new PdfDocumentBuilder();
+        presentation.export(builder);
+        var pdf = builder.getPdfDocument();
     }
 
     public static void abstractFactoryPatternDemo() {
