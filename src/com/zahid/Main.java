@@ -1,6 +1,9 @@
 package com.zahid;
 
 
+import com.zahid.abstractfactory.ant.AntWidgetFactory;
+import com.zahid.abstractfactory.app.ContactForm;
+import com.zahid.abstractfactory.material.MaterialWidgetFactory;
 import com.zahid.adapter.Image;
 import com.zahid.adapter.ImageView;
 import com.zahid.adapter.VividFilter;
@@ -50,9 +53,13 @@ import com.zahid.visitor.*;
 public class Main {
 
     public static void main(String[] args) {
-        factoryMethodPatternDemo();
+        abstractFactoryPatternDemo();
     }
 
+    public static void abstractFactoryPatternDemo() {
+        new ContactForm().render(new AntWidgetFactory());
+        // new ContactForm().render(new MaterialWidgetFactory());
+    }
     public static void factoryMethodPatternDemo(){
         var productController = new ProductController();
         productController.listProducts();
