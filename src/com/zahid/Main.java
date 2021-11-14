@@ -60,6 +60,7 @@ public class Main {
         builderPatternDemo();
     }
 
+    // Creation-al Design Patterns - All about creating objects
     public static void builderPatternDemo(){
         var presentation = new Presentation();
         presentation.addSlide(new Slide("Slide 1"));
@@ -74,7 +75,6 @@ public class Main {
         presentation.export(builder);
         var pdf = builder.getPdfDocument();
     }
-
     public static void abstractFactoryPatternDemo() {
         new ContactForm().render(new AntWidgetFactory());
         // new ContactForm().render(new MaterialWidgetFactory());
@@ -83,7 +83,6 @@ public class Main {
         var productController = new ProductController();
         productController.listProducts();
     }
-
     public static void singletonPatternDemo() {
         var configManager = ConfigManager.getInstance();
         configManager.set("name", "Zahid");
@@ -91,7 +90,6 @@ public class Main {
         var configManager1 = ConfigManager.getInstance();
         System.out.println(configManager1.get("name"));
     }
-
     public static void prototypePatternDemo(){
         var circle = new Circle(5);
 
@@ -103,6 +101,7 @@ public class Main {
 
     }
 
+    // Structural Design Patterns - These patterns are about relationship between objects
     public static void proxyPatternDemo() {
         var library = new Library();
         String[] fileNames = {"a", "b", "c"};
@@ -113,7 +112,6 @@ public class Main {
         library.openEbook("a");
         library.openEbook("b");
     }
-
     public static void bridgePatternDemo(){
         // var remoteControl = new RemoteControl(new SonyTV());
          var remoteControl = new AdvancedRemoteControl(new LgTV());
@@ -121,30 +119,25 @@ public class Main {
         remoteControl.turnOff();
         remoteControl.setChannel(10);
     }
-
     public static void flyweightPatternDemo(){
         var service = new PointService(new PointIconFactory());
         for(var point : service.getPoints())
             point.draw();
     }
-
     public static void facadePatternDemo(){
         var notificationService = new NotificationService();
         notificationService.send("Hellow World", "ip");
     }
-
     public static void decoratorPatternDemo(){
         var stream = new EncryptStream(new CompressedStream(new Storage()));
 
         stream.write("1234-1234-1234-1234");
     }
-
     public static void adaptorPatternDemo(){
         var imageView = new ImageView(new Image());
         imageView.apply(new VividFilter());
         imageView.apply(new PheonixAdaptor(new PheonixFilter()));
     }
-
     public static void compositePatternDemo(){
         var group1 = new Group();
         var group2 = new Group();
@@ -160,6 +153,7 @@ public class Main {
         group2.render();
     }
 
+    // Behavioural Design Patterns - All about Communications and interaction between objects.
     public static void visitorPatternDemo(){
         var document = new HtmlDocument();
         document.addNode(new AnchorNode());
@@ -169,7 +163,6 @@ public class Main {
         document.execute(operation1);
         document.execute(operation2);
     }
-
     public static void chainOfResponsibilityPatternDemo(){
         //pipeline --> authentication -> logger -> compression
         var compressor = new Compressor(null);
@@ -179,12 +172,10 @@ public class Main {
         var webServer = new WebServer(authenticator);
         webServer.handle(new HttpRequest("admin", "1234"));
     }
-
     public static void mediatorPatternDemo() {
         var dialogBox = new ArticlesDialogBox();
         dialogBox.simulateEvents();
     }
-
     public static void observerPatternDemo(){
         var dataSource = new DataSource();
         var sheet1 = new SpreadSheet("sheet1", dataSource);
@@ -203,69 +194,6 @@ public class Main {
         dataSource.setValue(5);
 
     }
-
-    public static void strategyPatternDemo(){
-        var storeImage = new ImageStorage(new PNGCompressor(), new ContrastFilter());
-        storeImage.store("C:\\zahid.jpg");
-    }
-
-    public static void iteratorPatternDemo(){
-        var history = new BrowseHistory();
-        var iterator = history.createIterator();
-
-        history.push("abc");
-        history.push("def");
-        history.push("ghi");
-        history.push("jkl");
-
-        while(iterator.hasNext()){
-            System.out.println(iterator.current());
-            iterator.next();
-        }
-
-
-    }
-
-    public static void statePatternDemo(){
-        var canvas = new Canvas(new Brush());
-        canvas.mouseUp();
-        canvas.mouseDown();
-
-        canvas.setTool(new Selection());
-
-        canvas.mouseUp();
-        canvas.mouseDown();
-
-
-    }
-
-    public static void mementoPatternDemo() {
-        /* memento Pattern */
-
-        var history = new com.zahid.memento.History();
-        var editor = new Editor();
-
-        editor.setContent("hello");
-        history.push(editor.createState());
-
-        editor.setContent("world");
-        history.push(editor.createState());
-        editor.setContent("green");
-        System.out.println(editor.getContent());
-
-        /* undo green */
-        editor.restoreState(history.pop());
-
-        System.out.println("undo: " +editor.getContent());
-    }
-
-    public static void templatePatternDemo() {
-        var moneyTransfer = new TransferMoney();
-        moneyTransfer.execute();
-        var reportGen = new GenerateReport();
-        reportGen.execute();
-    }
-
     public static void commandPatternDemo(){
 
         var service = new CustomerService();
@@ -295,6 +223,62 @@ public class Main {
         System.out.println(doc.getContent());
 
     }
+    public static void templatePatternDemo() {
+        var moneyTransfer = new TransferMoney();
+        moneyTransfer.execute();
+        var reportGen = new GenerateReport();
+        reportGen.execute();
+    }
+    public static void strategyPatternDemo(){
+        var storeImage = new ImageStorage(new PNGCompressor(), new ContrastFilter());
+        storeImage.store("C:\\zahid.jpg");
+    }
+    public static void iteratorPatternDemo(){
+        var history = new BrowseHistory();
+        var iterator = history.createIterator();
 
+        history.push("abc");
+        history.push("def");
+        history.push("ghi");
+        history.push("jkl");
+
+        while(iterator.hasNext()){
+            System.out.println(iterator.current());
+            iterator.next();
+        }
+
+
+    }
+    public static void statePatternDemo(){
+        var canvas = new Canvas(new Brush());
+        canvas.mouseUp();
+        canvas.mouseDown();
+
+        canvas.setTool(new Selection());
+
+        canvas.mouseUp();
+        canvas.mouseDown();
+
+
+    }
+    public static void mementoPatternDemo() {
+        /* memento Pattern */
+
+        var history = new com.zahid.memento.History();
+        var editor = new Editor();
+
+        editor.setContent("hello");
+        history.push(editor.createState());
+
+        editor.setContent("world");
+        history.push(editor.createState());
+        editor.setContent("green");
+        System.out.println(editor.getContent());
+
+        /* undo green */
+        editor.restoreState(history.pop());
+
+        System.out.println("undo: " +editor.getContent());
+    }
 
 }
