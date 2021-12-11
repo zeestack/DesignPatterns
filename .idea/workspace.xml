@@ -5,14 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f604edc-ddb8-4278-873e-42302f73ed63" name="Changes" comment="">
-<<<<<<< Updated upstream
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/CompressedStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/EncryptStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/Storage.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/CloudStream.java" afterDir="false" />
->>>>>>> Stashed changes
-      <change afterPath="$PROJECT_DIR$/src/com/zahid/decorator/Stream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -104,6 +97,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -115,6 +109,14 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.12690353" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.zahid.factorymethod.matcha" />
+      <recent name="com.zahid.factorymethod" />
+      <recent name="com.zahid.proxy" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
@@ -139,7 +141,7 @@
       <workItem from="1635801183992" duration="5003000" />
       <workItem from="1635826354707" duration="187000" />
       <workItem from="1635826578041" duration="13394000" />
-      <workItem from="1636410748497" duration="10212000" />
+      <workItem from="1636410748497" duration="8598000" />
     </task>
     <servers />
   </component>
@@ -157,5 +159,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
